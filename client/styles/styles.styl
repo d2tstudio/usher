@@ -1,0 +1,111 @@
+/*
+
+Usher
+
+*/
+
+$font-family-sans-serif   ?= 'Lato', sans-serif
+$brand-primary            ?= #ef6953
+$fa-font-path ?=          "../../.meteor/local/bower/font-awesome-stylus/fonts"
+
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
+@import '../../.meteor/local/build/programs/web.browser/packages/innovae_bootstrap-stylus/bootstrap'
+@import '../../.meteor/local/bower/font-awesome-stylus/stylus/index.styl'
+
+html, body
+  height 100%
+
+*
+  transition all 0.2s ease
+
+/* Site */
+body
+  background-color $gray-darker
+
+/* Header */
+.header
+  padding 30px 0px
+/* User */
+.user
+  text-align center
+  margin-bottom 90px
+
+  h1
+    font-size 16px
+    color white
+    margin-bottom 0px
+
+  p
+    font-size 14px
+    color $gray-light
+    margin-top 4px
+    margin-bottom 20px
+
+
+/* Components */
+.navbar
+  background transparent
+  border none
+
+
+.bg
+  height 100%
+  width 100%
+  background-color $gray-dark
+  background-image url('../images/bg.jpg')
+  background-size cover
+  position fixed
+  z-index -500
+  opacity 0.05
+
+/* portfolio */
+.col
+  padding 0px
+
+.shot
+  height 300px
+  background-size cover
+  background-repeat no-repeat
+  padding 0px
+
+  .shoterlay
+    height 100%
+    width 100%
+    background-color $brand-primary
+    position relative
+    opacity 0
+    .shot-description
+      position absolute
+      padding 20px 40px
+      h1
+        font-size 36px
+        font-weight 300
+        letter-spacing -1px
+    &:hover
+      display block
+      opacity 0.95
+
+.shot-description
+  color white
+  h1
+    margin-bottom 0.5em
+  p
+    font-weight 400
+
+.underlay
+  display none
+  .shot-description
+    text-align left
+    padding-right 80px
+    padding-bottom 30px
+    h1
+      font-size 16px
+    p
+      font-size 13px
+      font-weight 300
+
+/* Footer */
+.footer
+  padding 50px 0px
+  text-align center
+  color white

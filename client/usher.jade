@@ -1,0 +1,75 @@
+head
+  title Usher
+  meta(charset='UTF-8')
+  meta(content='', name='description')
+  meta(content='', name='author')
+  meta(content='3 days', name='revisit-after')
+
+body
+
+  .bg
+  
+  .container
+  
+      .header 
+        .navbar.navbar-inverse(role='navigation')
+          .container
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand(href='#')
+                span.glyphicon.glyphicon-leaf
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav
+                  li
+                    a(href='#') 
+                ul.nav.navbar-nav.navbar-right.social-icons
+                  li
+                    a(href='./') 
+                       span.glyphicon.glyphicon-align-justify
+              // /.nav-collapse
+
+      .user
+        .avatar
+          img.img-circle(src="http://www.gravatar.com/avatar/b3af8a49d41a465184e7620b936ccbe2.png")
+        h1 Tobias Larrmann
+        p UI Designer
+        
+        .social
+          button.btn.btn-primary Follow
+
+      .row
+        .col-md-4.col
+          .shot(style='background-image:url("../images/chat-party-ui_1x.png")')
+            .shoterlay
+              article.shot-description
+                h1 How I learned to stop worrying and love the bomb
+                p Quis do occaecat ut aliquip labore veniam officia voluptate nisi elit sit qui irure.
+          .underlay
+              article.shot-description
+                h1 How I learned to stop worrying and love the bomb
+                p Quis do occaecat ut aliquip labore veniam officia voluptate nisi elit sit qui irure.
+
+        .shot.col-md-4(style='background-image:url("../images/comp-2_7.gif")')
+          .shoterlay
+              article.shot-description
+                h1 How I learned to stop worrying and love the bomb
+                p Quis do occaecat ut aliquip labore veniam officia voluptate nisi elit sit qui irure.
+          
+        .shot.col-md-4(style='background-image:url("../images/create-role-comic-app-ux-ui-interface-design-ramotion.gif")')
+      .row
+        .shot.col-md-4(style='background-image:url("../images/freelance-fulltime_1x.png")')
+        .shot.col-md-4(style='background-image:url("../images/squadlance.gif")')
+        .shot.col-md-4(style='background-image:url("../images/chat-party-ui_1x.png")')
+      .row
+        .shot.col-md-4(style='background-image:url("../images/chat-party-ui_1x.png")')
+        .shot.col-md-4(style='background-image:url("../images/comp-2_7.gif")')
+        .shot.col-md-4(style='background-image:url("../images/create-role-comic-app-ux-ui-interface-design-ramotion.gif")')
+
+
+
+      footer.footer
+        p footer
