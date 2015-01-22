@@ -11,5 +11,7 @@ coffeescript
 stylus
 mquandalle:jade
 innovae:bootstrap-stylus
-accounts-twitter
 mquandalle:bower
+accounts-ui
+d2tstudio:dribbble
+d2tstudio:accounts-dribbble

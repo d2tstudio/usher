@@ -10,7 +10,7 @@ $brand-primary            ?= #ef6953
 $icon-font-path ?=        '../public/fonts/' */
 
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
-@import '../../.meteor/local/build/programs/web.browser/packages/innovae_bootstrap-stylus/bootstrap'
+@import '../../.meteor/local/build/programs/web.browser/packages/innovae_bootstrap-stylus/bootstrap/index.styl'
 @import '../../.meteor/local/bower/font-awesome-stylus/stylus/index.styl'
 
 html, body
@@ -29,6 +29,7 @@ body
 /* Header */
 .header
   padding 30px 0px
+
 /* User */
 .user
   text-align center
@@ -44,6 +45,13 @@ body
     color $gray-light
     margin-top 4px
     margin-bottom 20px
+
+  /* Login */
+  .login-button
+    btn-lg()
+    
+  .login-display-name
+    display none
 
 
 /* Components */
