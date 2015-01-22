@@ -12,12 +12,6 @@ Router.route '/',
     else
       this.next()
 
-Router.route '/directory',
-  name: 'directory',
-  data:->
-    user: ->
-      Meteor.users.find()
-
 Router.route 'profile/:_id',
   name: 'profile',
   data: ->
