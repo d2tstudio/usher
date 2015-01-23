@@ -1,6 +1,7 @@
 template(name="user")
   .user
     .avatar
+      a(href="{{pathFor 'profile'}}")
         img.img-circle(src="{{services.dribbble.avatar}}")
     h1 {{profile.name}}
     p {{services.dribbble.bio}}

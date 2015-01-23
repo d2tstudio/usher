@@ -1,11 +1,6 @@
 template(name="directory")
-  .bg
+  .directory
 
-  .container
-
-      +header
-
-      .directory
-
-        each user
-          +user
+    each user
+      .usercard.col-md-3
+        +user
