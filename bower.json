@@ -1,11 +1,7 @@
 {
   "name": "Usher",
   "version": "0.0.1",
-  "dependencies": {
-    "font-awesome-stylus": "~4.2.0"
-  },
-  "devDependencies": {
-    "font-awesome-stylus": "~4.2.0"
-  },
+  "dependencies": {},
+  "devDependencies": {},
   "private": true
 }

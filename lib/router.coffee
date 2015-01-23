@@ -12,6 +12,7 @@ Router.route '/',
     services:
       dribbble:
         bio: "Folios for designers"
+        avatar: ""
   onBeforeAction: ->
     if Meteor.user()
       Router.go 'profile', {_id: Meteor.userId()}
