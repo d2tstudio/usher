@@ -1,10 +1,9 @@
 template(name="user")
   .user
     .avatar
-      img.img-circle(src="{{services.dribbble.avatar}}")
+        img.img-circle(src="{{services.dribbble.avatar}}")
     h1 {{profile.name}}
     p {{services.dribbble.bio}}
 
     .social
-      // button.btn.btn-primary Follow
       +loginButtons
