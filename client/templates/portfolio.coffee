@@ -1,7 +1,7 @@
 Shots = new Meteor.Collection(null)
 
 Template.portfolio.rendered = ->
-  shots = Meteor.call 'loadDribbbleShots', (error,results) ->
+  shots = Meteor.call 'loadDribbbleShots', this.data.services.dribbble.accessToken, (error,results) ->
     if(error)
       console.log(error)
     else

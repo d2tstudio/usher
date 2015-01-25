@@ -20,6 +20,23 @@ $lighten-amount = 10%
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900);
 @import '../../.meteor/local/build/programs/web.browser/packages/innovae_bootstrap-stylus/bootstrap/index.styl'
 
+/*
+Mixins
+*/
+
+dark()
+  background-color $gray-dark
+  color white
+
+light()
+  background-color #fcfcfc
+  color $gray-dark
+
+
+.centered
+  text-align center
+
+
 html, body
   height 100%
 
@@ -31,11 +48,11 @@ i
 
 /* Site */
 body
-  background-color $gray-darker
+  dark()
 
 /* Header */
 .header
-  padding 30px 0px
+  padding 10px 0px
 
 /* User */
 .user
@@ -47,8 +64,8 @@ body
       max-height 80px
 
   h1
-    font-size 16px
-    color white
+    font-size 30px
+    font-weight 300
     margin-bottom 0px
 
   p
@@ -57,18 +74,18 @@ body
     margin-top 4px
     margin-bottom 20px
 
-  /* Login */
-  #login-buttons
-    .login-button
-      background-color $dribbble-pink
-      font-size 90%
-      border 0px
-      padding 10px 15px
-      &:hover
-        background-color saturate($dribbble-pink, $lighten-amount)
+/* Login */
+#login-buttons
+  .login-button
+    background-color $dribbble-pink
+    font-size 90%
+    border 0px
+    padding 10px 15px
+    &:hover
+      background-color saturate($dribbble-pink, $lighten-amount)
 
-    .login-display-name
-      display none
+  .login-display-name
+    display none
 
 
 /* Components */
@@ -79,7 +96,6 @@ body
 .bg
   height 100%
   width 100%
-  background-color $gray-dark
   background-image url('../images/bg.jpg')
   background-size cover
   position fixed
@@ -135,15 +151,21 @@ body
 
 /* Sign up */
 .signup
-  h1
-    font-size 72px
-    font-weight 300
-    margin-top 2em
-  #login-buttons
-    margin 2em
+  .welcome
+    padding 100px
+    text-align center
+    h1
+      font-size 72px
+      font-weight 300
+      margin-top 2em
+    #login-buttons
+      margin 2em
+
+.section-header
+  text-align center
+  padding 50px 0px
 
 /* Footer */
 .footer
   padding 50px 0px
   text-align center
-  color white

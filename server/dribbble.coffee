@@ -3,6 +3,6 @@ dribbbleAPI = config:
   shots: "/user/shots/"
 
 # Dribbble meteor methods
-Meteor.methods loadDribbbleShots: ->
+Meteor.methods loadDribbbleShots: (accessToken)->
   @unblock()
-  Meteor.http.call "GET", "https://api.dribbble.com/v1/user/shots?per_page=9&access_token=" + Meteor.user().services.dribbble.accessToken
+  Meteor.http.call "GET", "https://api.dribbble.com/v1/user/shots?per_page=9&access_token=" + accessToken

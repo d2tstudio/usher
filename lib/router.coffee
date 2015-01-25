@@ -6,13 +6,9 @@ Router.configure
 
 Router.route '/',
   name: 'home'
-  data:
-    profile:
-      name:"Usher"
-    services:
-      dribbble:
-        bio: "Folios for designers"
-        avatar: ""
+  data: ->
+    user: ->
+      Meteor.users.find()
   onBeforeAction: ->
     if Meteor.user()
       Router.go 'profile', {_id: Meteor.userId()}

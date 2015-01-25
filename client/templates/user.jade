@@ -7,4 +7,7 @@ template(name="user")
     p {{services.dribbble.bio}}
 
     .social
-      +loginButtons
+      if currentUser
+        +loginButtons
+      else
+        button.btn.btn-default.btn-primary Follow
