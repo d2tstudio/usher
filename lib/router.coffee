@@ -15,10 +15,10 @@ Router.route '/',
     else
       this.next()
 
-Router.route 'profile/:_id',
-  name: 'profile',
+Router.route 'profile/:username',
+  name: 'profile'
   data: ->
-    Meteor.users.findOne(this.params._id)
+    Meteor.users.findOne({"services.dribbble.username": this.params.username})
 
 Router.route '/directory',
   name: 'directory'
