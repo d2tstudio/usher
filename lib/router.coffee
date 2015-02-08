@@ -9,11 +9,14 @@ Router.route '/',
   data: ->
     user: ->
       Meteor.users.find()
+
+###
   onBeforeAction: ->
     if Meteor.user()
       Router.go 'profile', {_id: Meteor.userId()}
     else
       this.next()
+###
 
 Router.route 'profile/:username',
   name: 'profile'
@@ -24,4 +27,4 @@ Router.route '/directory',
   name: 'directory'
   data: ->
     user: ->
-      Meteor.users.find()
+        Meteor.users.find()

@@ -7,7 +7,5 @@ template(name="user")
     p {{services.dribbble.bio}}
 
     .social
-      if currentUser
-        +loginButtons
-      else
-        button.btn.btn-default.btn-primary Follow
+        a(href="{{pathFor 'profile' username=services.dribbble.username}}")
+          button.btn.btn-default.btn-primary Open
