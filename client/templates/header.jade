@@ -10,12 +10,5 @@ template(name="header")
         a.navbar-brand(href='/')
           i.fa.fa-diamond
           
-      .navbar-collapse.collapse
-          ul.nav.navbar-nav
-            li
-              a(href='#')
-          ul.nav.navbar-nav.navbar-right
-            li
-              +loginButtons
-              
-        // /.nav-collapse
+      form.navbar-form.navbar-right
+        +loginButtons
