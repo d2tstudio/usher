@@ -2,9 +2,11 @@ template(name="portfolio")
   .portfolio.container-fluid
     .row
       each shots
-          .col-md-4.col
-            .shot(style='background-image:url(#{images.normal})')
-              .shoterlay
-                article.shot-description
-                  h1 #{title}
-                  p Quis do occaecat ut aliquip labore veniam officia voluptate nisi elit sit qui irure.
+        .col-md-4.col
+          .shot
+            .shoterlay
+              article.shot-description
+                h1 #{title}
+                p Quis do occaecat ut aliquip labore veniam officia voluptate nisi elit sit qui irure.
+
+            img(src="#{images.normal}")

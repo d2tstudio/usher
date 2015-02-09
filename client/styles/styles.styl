@@ -110,19 +110,20 @@ body
   padding 0px
 
 .shot
-  height 300px
-  background-size cover
-  background-repeat no-repeat
   padding 0px
+  position relative
+
+  img
+    width 100%
 
   .shoterlay
     height 100%
     width 100%
     background-color $brand-primary
-    position relative
     opacity 0
+    position absolute
     .shot-description
-      position absolute
+
       padding 20px 40px
       h1
         font-size 36px
@@ -138,19 +139,6 @@ body
     margin-bottom 0.5em
   p
     font-weight 400
-
-.underlay
-  display none
-  .shot-description
-    text-align left
-    padding-right 80px
-    padding-bottom 30px
-    h1
-      font-size 16px
-    p
-      font-size 13px
-      font-weight 300
-
 
 /* Sign up */
 .signup
