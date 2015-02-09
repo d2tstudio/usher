@@ -4,9 +4,18 @@ template(name="portfolio")
       each shots
         .col-md-4.col
           .shot
+            .label
+              article.shot-description
+                li #{title}
+                li.likes #{likes_count}
+                  span.fa.fa-heart
             .shoterlay
               article.shot-description
                 h1 #{title}
-                p Quis do occaecat ut aliquip labore veniam officia voluptate nisi elit sit qui irure.
+                | #{description}
+                .likes
+                  ul
+                    li #{likes_count} liked
+                    li #{views_count} View
 
             img(src="#{images.normal}")
