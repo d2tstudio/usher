@@ -1,2 +1,5 @@
 template(name='home')
-  +signup
+  if currentuser
+    +welcome
+  else 
+    +signup

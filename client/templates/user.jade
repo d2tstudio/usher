@@ -7,5 +7,5 @@ template(name="user")
     p {{services.dribbble.bio}}
 
     .social
-        a(href="{{pathFor 'profile' username=services.dribbble.username}}")
-          button.btn.btn-default.btn-primary Open
+        a(href="http://dribbble.com/{{services.dribbble.username}}")
+          button.btn.btn-default.btn-primary Follow on Dribbble

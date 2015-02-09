@@ -1,19 +1,15 @@
 template(name="signup")
   
-    .signup.container
+    .signup.container-fluid
 
       .row 
         .welcome
           h1 One click folios for Dribbblers
           p Simple sign in with Dribbble by clicking the button below to load your folio
-          +loginButtons
+          
 
-      .section-header.row
-        h2 Directory
-        p See who else is powered by Usher
-
-      .row 
-        +directory
+      .row
+        +directoryGrid
 
     footer.footer
       p Powered by
