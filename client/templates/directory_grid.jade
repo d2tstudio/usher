@@ -1,5 +1,5 @@
 template(name="directoryGrid")
-  .directoryGrid
+  .directoryGrid.centered
     each user
       a(href="{{pathFor 'profile' username=services.dribbble.username}}")
-        img(src="{{services.dribbble.avatar}}")
+        img.img-circle(src="{{services.dribbble.avatar}}")
