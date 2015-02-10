@@ -8,10 +8,10 @@ meteor-platform
 coffeescript
 stylus
 mquandalle:jade
-innovae:bootstrap-stylus
 accounts-ui
 d2tstudio:dribbble
 d2tstudio:accounts-dribbble
 iron:router
 sacha:spin
 natestrauser:font-awesome
+innovae:bootstrap-stylus
