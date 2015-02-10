@@ -9,8 +9,6 @@ Router.route '/',
   data: ->
     user: ->
       Meteor.users.find()
-
-
   onBeforeAction: ->
     if user = Meteor.user()
       Router.go 'profile', {username: user.services.dribbble.username}
