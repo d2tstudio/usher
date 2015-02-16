@@ -176,8 +176,17 @@ body
   .welcome
     text-align center
     h1
-      font-size 72px
-      font-weight 300
+      font-size: 36px;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 10px;
+      margin 40px 20px 15px
+    p.lead
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      opacity 0.6
     #login-buttons
       margin 2em
 
@@ -219,3 +228,18 @@ body
 @media (max-width: $screen-xs-max)
   #Home .bg
     opacity 0.3
+
+  #login-buttons
+    margin 0px 10px
+
+  .footer
+    width 100%
+    margin 0 auto
+
+  .signup
+    .welcome
+      text-align left
+      h1
+      p.lead
+        letter-spacing 3px
+        margin-left 0px
