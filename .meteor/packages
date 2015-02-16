@@ -8,12 +8,10 @@ meteor-platform
 coffeescript
 stylus
 mquandalle:jade
-innovae:bootstrap-stylus
-mquandalle:bower
 accounts-ui
 d2tstudio:dribbble
 d2tstudio:accounts-dribbble
 iron:router
 sacha:spin
 natestrauser:font-awesome
-insecure
+innovae:bootstrap-stylus

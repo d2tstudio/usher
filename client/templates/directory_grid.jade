@@ -1,0 +1,5 @@
+template(name="directoryGrid")
+  .directoryGrid.centered
+    each user
+      a(href="{{pathFor 'profile' username=services.dribbble.username}}")
+        img.img-circle(src="{{services.dribbble.avatar}}")

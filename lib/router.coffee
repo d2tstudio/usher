@@ -10,18 +10,18 @@ Router.route '/',
     user: ->
       Meteor.users.find()
   onBeforeAction: ->
-    if Meteor.user()
-      Router.go 'profile', {_id: Meteor.userId()}
+    if user = Meteor.user()
+      Router.go 'profile', {username: user.services.dribbble.username}
     else
       this.next()
 
-Router.route 'profile/:_id',
-  name: 'profile',
+Router.route '/:username',
+  name: 'profile'
   data: ->
-    Meteor.users.findOne(this.params._id)
+    Meteor.users.findOne({"services.dribbble.username": this.params.username})
 
 Router.route '/directory',
   name: 'directory'
   data: ->
     user: ->
-      Meteor.users.find()
+        Meteor.users.find()

@@ -1,14 +1,21 @@
 template(name="portfolio")
-  .portfolio.container
+  .portfolio.container-fluid
     .row
       each shots
-          .col-md-4.col
-            .shot(style='background-image:url(#{images.normal})')
-              .shoterlay
-                article.shot-description
-                  h1 #{title}
-                  p Quis do occaecat ut aliquip labore veniam officia voluptate nisi elit sit qui irure.
-            .underlay
-                article.shot-description
-                  h1 How I learned to stop worrying and love the bomb
-                  p Quis do occaecat ut aliquip labore veniam officia voluptate nisi elit sit qui irure.
+        .col-md-4.col
+          .shot
+            .label
+              article.shot-description
+                li #{title}
+                li.likes #{likes_count}
+                  span.fa.fa-heart
+            .shoterlay
+              article.shot-description
+                h1 #{title}
+                | #{description}
+                .likes
+                  ul
+                    li #{likes_count} liked
+                    li #{views_count} View
+
+            img(src="#{images.normal}")
