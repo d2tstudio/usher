@@ -38,6 +38,12 @@ primary()
 .centered
   text-align center
 
+/* TYPOGRAPHY */
+.smallcaps, smallcaps()
+  text-transform uppercase
+  font-size 12px
+  letter-spacing 2px
+
 html, body
   height 100%
 
@@ -163,12 +169,10 @@ body
 /* Sign up */
 .signup
   .welcome
-    padding 0px 0px 100px
     text-align center
     h1
       font-size 72px
       font-weight 300
-      margin-top 1em
     #login-buttons
       margin 2em
 
@@ -178,9 +182,12 @@ body
 
 /* Footer */
 .footer
-  padding 50px 0px
   text-align center
-
+  position absolute
+  bottom 25px
+  margin 0 auto
+  width 100%
+  smallcaps()
 
 /* DIRECTORY */
 .directoryGrid
@@ -197,4 +204,7 @@ body
   opacity 0.8
 
 .branding
-  padding 50px 0px
+
+
+#Home .bg
+  opacity 1
