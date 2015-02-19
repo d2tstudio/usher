@@ -15,6 +15,24 @@ $dribbble-grey  = #333333
 /* Variables */
 $lighten-amount = 10%
 
+
+/* Modal */
+$modal-inner-padding            ?= 0px
+$modal-title-padding            ?= 0px
+$modal-title-line-height ?=     $line-height-base
+$modal-content-bg ?=             transparent
+$modal-content-border-color ?=   transparent
+$modal-content-fallback-border-color ?=          #999
+$modal-backdrop-bg ?=           #000
+$modal-backdrop-opacity ?=      .8
+$modal-header-border-color ?=   transparent
+$modal-footer-border-color ?=   $modal-header-border-color
+
+$modal-lg ?=                    90%
+$modal-md ?=                    600px
+$modal-sm ?=                    300px
+
+
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 @import "../../.meteor/local/build/programs/web.browser/packages/innovae_bootstrap-stylus/bootstrap/index.styl"
 
@@ -244,6 +262,12 @@ body
 
 #Home .bg
   opacity 1
+
+/* Modals */
+.modal-dialog
+  .modal-content
+    font-weight 300
+    color white
 
 
 @media (max-width: $screen-xs-max)
