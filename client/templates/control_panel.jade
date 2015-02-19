@@ -2,21 +2,24 @@ template(name="controlPanel")
   section#ControlPanel.modal.control-panel
     .modal-dialog.modal-lg
       .modal-content
-        .modal-header
+        .modal-body
           button.pull-right.btn.btn-link.btn-lg(type="button", data-dismiss="modal")
               span.fa.fa-close
           .row
             .col-md-3
+              h3 
+                span.fa.fa-diamond
               h1 About Usher
-              p Thanks for checking out this app. We're at version 0.1. I'll keep pushing.
-        .modal-body
-          .row
-            .col-md-3
-              h5 Newsletter
-              p Hey, why not sign up for awesomeness by mail. I'd love it.
-              #SubscribeForm
-                +MailChimpListSubscribe
+              p Thanks for checking out this app. I'm at version 0.1. I'll keep pushing. You know, it's just little me.
 
-            .col-md-3
-              h5 Feedback
-              p Hey, why not write to me with your feedback. I'd love it.
+            .col-md-9
+              .row
+                .col-md-7.col-md-offset-1
+                  h5 Newsletter
+                  p Hey, why not sign up for awesomeness by mail. I'd love it.
+                  #SubscribeForm
+                    +MailChimpListSubscribe
+
+                .col-md-3
+                  h5 Feedback
+                  p Hey, why not write to me with your feedback. I'd love it.
