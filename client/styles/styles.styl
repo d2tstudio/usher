@@ -24,7 +24,7 @@ $modal-content-bg ?=             transparent
 $modal-content-border-color ?=   transparent
 $modal-content-fallback-border-color ?=          #999
 $modal-backdrop-bg ?=           #000
-$modal-backdrop-opacity ?=      .8
+$modal-backdrop-opacity ?=      .85
 $modal-header-border-color ?=   transparent
 $modal-footer-border-color ?=   $modal-header-border-color
 
@@ -266,8 +266,16 @@ body
 /* Modals */
 .modal-dialog
   .modal-content
-    font-weight 300
     color white
+    h1
+      font-weight 300
+    h5
+        text-transform uppercase
+        font-size 10px
+        letter-spacing 2px
+    p
+      color $gray-light
+
 
 
 @media (max-width: $screen-xs-max)

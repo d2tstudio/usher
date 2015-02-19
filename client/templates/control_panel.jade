@@ -5,8 +5,18 @@ template(name="controlPanel")
         .modal-header
           button.pull-right.btn.btn-link.btn-lg(type="button", data-dismiss="modal")
               span.fa.fa-close
-          h1 About Usher
-          p Thanks for checking out this app.
+          .row
+            .col-md-3
+              h1 About Usher
+              p Thanks for checking out this app. We're at version 0.1. I'll keep pushing.
         .modal-body
-          h5 Newsletter
-          p Hey, why not sign up for awesomeness by mail
+          .row
+            .col-md-3
+              h5 Newsletter
+              p Hey, why not sign up for awesomeness by mail. I'd love it.
+              #SubscribeForm
+                +MailChimpListSubscribe
+
+            .col-md-3
+              h5 Feedback
+              p Hey, why not write to me with your feedback. I'd love it.
