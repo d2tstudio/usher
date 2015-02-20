@@ -1,25 +1,30 @@
 template(name="controlPanel")
-  section#ControlPanel.modal.control-panel
-    .modal-dialog.modal-lg
+  section#ControlPanel.modal.control-panel.fade
+    .modal-dialog
       .modal-content
-        .modal-body
+        .modal-header
           button.pull-right.btn.btn-link.btn-lg(type="button", data-dismiss="modal")
               span.fa.fa-close
+          
           .row
-            .col-md-3
-              h3 
+            .col-md-12
+              h1
                 span.fa.fa-diamond
-              h1 About Usher
-              p Thanks for checking out this app. I'm at version 0.1. I'll keep pushing. You know, it's just little me.
+              h1 Usher
+              p v0.3        
+        
+        .modal-body
+          .row
+            .col-md-6.col-md-offset-3
+              h5 About
+              p 
+                | Usher is being built by 
+                a(href="http://dribbble.com/derrybirkett") Derry Birkett
+                | , a designer who wants to be free from uploading images to his website.
 
-            .col-md-9
-              .row
-                .col-md-7.col-md-offset-1
-                  h5 Newsletter
-                  p Hey, why not sign up for awesomeness by mail. I'd love it.
-                  #SubscribeForm
-                    +MailChimpListSubscribe
-
-                .col-md-3
-                  h5 Feedback
-                  p Hey, why not write to me with your feedback. I'd love it.
+          .row
+            .col-md-6.col-md-offset-3
+              h5 Follow Updates
+              p Usher is in constant development, leave your email to be notified of feature updates.
+              #SubscribeForm
+                +MailChimpListSubscribe

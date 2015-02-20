@@ -13,6 +13,7 @@ $dribbble-grey  = #333333
 
 $lighten-amount = 20%
 
+
 /* FONTS */
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 
@@ -25,6 +26,7 @@ Mixins
 
 dark()
   background-color $gray-dark
+  border-color $gray-dark
   color white
 
 light()
@@ -42,7 +44,7 @@ primary()
 /* TYPOGRAPHY */
 smallcaps()
   text-transform uppercase
-  font-size 10px
+  font-size 11px
   letter-spacing 2px
 
 html, body
@@ -239,46 +241,62 @@ body
   height 100%
   opacity 0.8
 
-.branding
-
-
 #Home .bg
   opacity 1
 
 /* Modals */
 .modal-dialog
   .modal-content
-    color white
+    text-align center
+    box-shadow none
+    border-radius 0px
+    border: 20px solid rgba(0,0,0,0.2)
+    opacity 0.98
     h1
       font-weight 300
+      color $gray
     h5
       smallcaps()
-
+      color $gray-dark
+      font-weight 800
     p
-      color $gray-light
+      color #999
+    .row
+      margin-bottom 40px
+  .modal-header
+    p
+      smallcaps()
+
 
 /* FORMS */
 outline()
   background-color transparent
-  border 2px solid white
+  border 2px solid $gray-light
   border-radius 5px
   padding 1em
 
-input, button
+input, button,
+.btn
   smallcaps()
+  padding 1em 2em
+
 
 /* Mailchimp */
 #SubscribeForm
   input, button
     outline()
+    dark()
   input
-    width 200px
+    width 150px
   button
     background-color $brand-primary
     border-color $brand-primary
     &:hover
       background-color saturate($brand-primary,$lighten-amount)
       border-color saturate($brand-primary,$lighten-amount)
+
+  .message
+    smallcaps()
 
 @media (max-width: $screen-xs-max)
   #Home .bg
