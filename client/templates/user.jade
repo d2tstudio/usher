@@ -1,11 +1,13 @@
 template(name="user")
-  .user
-    .avatar
-      a(href="{{pathFor 'profile'}}")
-        img.img-circle(src="{{services.dribbble.avatar}}")
-    h1 {{profile.name}}
-    p {{services.dribbble.bio}}
+  .user.container-fluid
+    .row
+      .col-md-12
+        .avatar
+          a(href="{{pathFor 'profile'}}")
+            img.img-circle(src="{{services.dribbble.avatar}}")
+        h1 {{profile.name}}
+        p {{services.dribbble.bio}}
 
-    .social
-        a(href="http://dribbble.com/{{services.dribbble.username}}")
-          button.btn.btn-default.btn-primary Follow on Dribbble
+        .social
+            a(href="http://dribbble.com/{{services.dribbble.username}}")
+              button.btn.btn-default.btn-primary Follow on Dribbble
