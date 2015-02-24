@@ -1,0 +1,30 @@
+template(name="controlPanel")
+  section#ControlPanel.modal.control-panel.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.pull-right.btn.btn-link.btn-lg(type="button", data-dismiss="modal")
+              span.fa.fa-close
+          
+          .row
+            .col-md-12
+              h1
+                img.logo(src="images/monospace.svg") 
+              h1 Monospace Gallery
+              p v0.3        
+        
+        .modal-body
+          .row
+            .col-md-6.col-md-offset-3
+              h5 About
+              p 
+                | Monospace Gallery is being built by 
+                a(href="http://dribbble.com/derrybirkett") Derry Birkett
+                | , a designer who wants to be free from uploading images to his website.
+
+          .row
+            .col-md-6.col-md-offset-3
+              h5 Follow Updates
+              p This app is in constant development, leave your email to be notified of feature updates.
+              #SubscribeForm
+                +MailChimpListSubscribe

@@ -2,7 +2,7 @@ template(name="portfolio")
   .portfolio.container-fluid
     .row
       each shots
-        .col-md-4.col
+        .col.col-md-3.col-sm-6
           .shot
             .label
               article.shot-description
@@ -11,11 +11,13 @@ template(name="portfolio")
                   span.fa.fa-heart
             .shoterlay
               article.shot-description
-                h1 #{title}
-                | #{description}
                 .likes
                   ul
-                    li #{likes_count} liked
-                    li #{views_count} View
+                    li.fa.fa-heart 
+                      span.result-count #{likes_count}
+                    li.fa.fa-eye 
+                      span.result-count #{views_count}
 
+                h1 #{title}
+                | {{{description}}}
             img(src="#{images.normal}")
