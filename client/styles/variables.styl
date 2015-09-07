@@ -1,5 +1,30 @@
 $font-family-sans-serif   ?= 'Lato', sans-serif
-$brand-primary            ?= #8aba56
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$brand-primary ?=       #8aba56
+$brand-success ?=       #5cb85c
+$brand-info ?=          #5bc0de
+$brand-warning ?=       #f0ad4e
+$brand-danger ?=        #d9534f
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Global text color on `<body>`.
+$text-color ?=            #333
+
+//** Global textual link color.
+$link-color ?=            #333
+
+//** Link hover color set via `darken()` function.
+$link-hover-color ?=      #333
+
+//** Link hover decoration.
+$link-hover-decoration ?= none
 
 /* BOOTSTRAP */
 /* Modal */
@@ -9,14 +34,14 @@ $modal-title-line-height ?=     $line-height-base
 $modal-content-bg ?=             white
 $modal-content-border-color ?=   transparent
 $modal-content-fallback-border-color ?=          #999
-$modal-backdrop-bg ?=           $dribbble-grey
-$modal-backdrop-opacity ?=      .2
+$modal-backdrop-bg ?=           white
+$modal-backdrop-opacity ?=      1
 $modal-header-border-color ?=   transparent
 $modal-footer-border-color ?=   $modal-header-border-color
 
-$modal-lg ?=                    95%
-$modal-md ?=                    60%
-$modal-sm ?=                    30%
+$modal-lg ?=                    100%
+$modal-md ?=                    100%
+$modal-sm ?=                    100%
 
 
 //== Forms
@@ -30,7 +55,7 @@ $input-color ?=                  $gray
 $input-border ?=                 $gray
 
 $input-border-radius ?=          $border-radius-base
-$input-border-radius-large ?=     $border-radius-large
+$input-border-radius-large ?=    $border-radius-large
 $input-border-radius-small ?=    $border-radius-small
 
 //** Border color for inputs on focus

@@ -29,14 +29,15 @@ $lighten-amount = 20%
 
 /*  COMPONENTS
 -------------- */
+@import "components/buttons.styl"
 @import "components/forms.styl"
-@import "components/mailchimp.styl"
 @import "components/portfolio.styl"
 @import "components/signup.styl"
+@import "components/navbar.styl"
 @import "components/footer.styl"
 @import "components/user.styl"
 @import "components/modals.styl"
-@import "components/buttons.styl"
+@import "components/mailchimp.styl"
 
 /*  SITE
 -------- */
@@ -58,19 +59,6 @@ body
   i:before
     margin-right 5px
 
-/* Components */
-.navbar
-  background transparent
-  border none
-
-img.logo
-  height 40px
-  width 40px
-
-.navbar-form
-  border 0px
-  box-shadow none
-
 .bg
   height 100%
   width 100%
@@ -80,8 +68,6 @@ img.logo
   position fixed
   z-index -500
   opacity 0.05
-
-
 
 /* DIRECTORY */
 .directory-grid

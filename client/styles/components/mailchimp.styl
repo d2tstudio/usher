@@ -5,17 +5,18 @@
 */
 
 #SubscribeForm
-  input, button
-/*    outline()
-    dark()*/
-  input
-    width 150px
   button
-    background-color $brand-primary
-    border-color $brand-primary
+    plainTextButton()
+    smallcaps()
+  input
+    smallcaps()
+  button
+    background-color white
+    border none
+    border-bottom 2px solid black
     &:hover
-      background-color saturate($brand-primary,$lighten-amount)
-      border-color saturate($brand-primary,$lighten-amount)
+      border-bottom-color $brand-primary
 
   .message
     smallcaps()
+    padding 20px 0px 10px 0px

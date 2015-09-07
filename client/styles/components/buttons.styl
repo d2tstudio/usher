@@ -4,9 +4,36 @@ BUTTONS
 
 */
 
+roundedButton()
+  border-radius 50px
+
+outlineButton()
+  border 1px solid black
+  font-weight 400
+  color black
+  background none
+
+underlinedButton()
+  background none
+  border-bottom 2px solid black
+  border-radius 0px
+
+plainTextButton()
+  background none
+  border-radius 0px
+  border none
+  border-bottom 2px solid white
+  &:hover
+    border-bottom 2px solid $brand-primary
+
 raisedButton()
   border-bottom: 3px solid green;
 
+.plainTextButton
+  plainTextButton()
+
+a.menu.btn.btn-link
+  color $gray
 
 /* Login */
 #login-buttons
@@ -14,10 +41,15 @@ raisedButton()
     background-color $brand-primary
     font-size 90%
     border 0px
-    padding 10px 15px
+    padding 10px 5px
     smallcaps()
     &:hover
       background-color saturate($brand-primary, $lighten-amount)
 
+    &#login-buttons-logout
+      plainTextButton()
+      color $gray
+
   .login-display-name
-    display none
+    smallcaps()
+    color #ccc

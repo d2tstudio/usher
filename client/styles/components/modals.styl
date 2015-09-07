@@ -8,12 +8,19 @@ Modals
   padding 0px !important
 
 .modal-dialog
+  margin 0px
   .modal-content
     text-align center
     box-shadow none
     border-radius 0px
-    border: 20px solid rgba(0,0,0,0.2)
     opacity 0.98
+
+    .modal-header
+      p
+        smallcaps()
+      img.logo
+        margin 10px 0px 0px
+
     h1
       font-weight 300
       color $gray
@@ -25,6 +32,10 @@ Modals
       color #999
     .row
       margin-bottom 40px
-  .modal-header
-    p
-      smallcaps()
+
+.close-button
+  color black
+  smallcaps()
+  plainTextButton()
+  margin 10px
+  padding 5px 0px
