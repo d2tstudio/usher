@@ -1,65 +1,54 @@
 /*
 
-Usher
+  M O N O S P A C E . G A L L E R Y
 
 */
 
-/* Variables */
-
-/* Dribbble */
+/*  VARIABLES
+----------- */
+/* Dribbble Palette */
 $dribbble-pink  = #ea4c89
 $dribbble-green = #8aba56
 $dribbble-grey  = #333333
 
 $lighten-amount = 20%
 
-
 /* FONTS */
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
 
+/* BOOTSTRAP */
 @import "variables.styl"
 @import "../../.meteor/local/build/programs/web.browser/packages/innovae_bootstrap-stylus/bootstrap/index.styl"
 
-/*
-Mixins
-*/
 
-dark()
-  background-color $gray-dark
-  border-color $gray-dark
-  color white
+/*  BASE STYLES & MIXINS
+------------------------ */
+@import "mixins.styl"
+@import "typography.styl"
 
-light()
-  background-color #fcfcfc
-  color $gray-dark
 
-primary()
-.primary
-  background-color $brand-primary
-  color white
+/*  COMPONENTS
+-------------- */
+@import "components/forms.styl"
+@import "components/mailchimp.styl"
+@import "components/portfolio.styl"
+@import "components/signup.styl"
+@import "components/footer.styl"
+@import "components/user.styl"
+@import "components/modals.styl"
+@import "components/buttons.styl"
 
-.centered
-  text-align center
-
-/* TYPOGRAPHY */
-smallcaps()
-  text-transform uppercase
-  font-size 11px
-  letter-spacing 2px
-  font-weight 600
-
+/*  SITE
+-------- */
 html, body
   height 100%
 
 *
   transition all 0.2s ease
 
-i
-  color white
-
 /* Site */
 body
-  dark()
+  padding 0px
 
 /* Header */
 .header
@@ -68,41 +57,6 @@ body
 .navbar-brand
   i:before
     margin-right 5px
-
-/* User */
-.user
-  text-align center
-  margin-bottom 90px
-
-  .avatar
-    img
-      max-height 80px
-
-  h1
-    font-size 30px
-    font-weight 300
-    margin-bottom 0px
-
-  p
-    font-size 14px
-    color $gray-light
-    margin-top 4px
-    margin-bottom 20px
-
-/* Login */
-#login-buttons
-  .login-button
-    background-color $brand-primary
-    font-size 90%
-    border 0px
-    padding 10px 15px
-    smallcaps()
-    &:hover
-      background-color saturate($brand-primary, $lighten-amount)
-
-  .login-display-name
-    display none
-
 
 /* Components */
 .navbar
@@ -127,122 +81,7 @@ img.logo
   z-index -500
   opacity 0.05
 
-/* portfolio */
-.col
-  padding 0px
 
-.shot
-  padding 0px
-  position relative
-
-  img
-    width 100%
-
-  .label
-    display none
-    position absolute
-    bottom 30px
-    padding 0px
-    .shot-description
-      li
-        font-size 12px
-        font-weight 600
-        text-transform uppercase
-        background-color $brand-primary
-        padding 1em
-        opacity 0.95
-        float left
-        list-style none
-        &.likes
-          background-color white
-          color $brand-primary
-          span.fa
-            margin-left 5px
-
-  .shoterlay
-
-    height 100%
-    width 100%
-    background-color $gray-darker
-    opacity 0
-    position absolute
-    .shot-description
-      padding 5px 25px
-      h1
-        font-size 28px
-        font-weight 300
-        letter-spacing -1px
-        clear both
-      ul
-        list-style none
-        margin-left 0em
-        padding-left 0em
-        li
-          float left
-          margin-right 1em
-          padding 1em 0em
-          &.fa
-            margin-right 10px
-            padding-right 10px
-            span
-              padding-left 10px
-    &:hover
-      display block
-      opacity 0.95
-
-.shot-description
-  color white
-  h1
-    margin-bottom 0.5em
-  p
-    font-weight 400
-    font-size 13px
-
-/* Sign up */
-.signup
-  .welcome
-    text-align center
-    h1
-      font-size: 36px;
-      font-weight: 300;
-      text-transform: uppercase;
-      letter-spacing: 10px;
-      margin 60px 20px 15px
-    p.lead
-      font-size: 12px;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      opacity 0.6
-    #login-buttons
-      margin 2em
-
-.section-header
-  text-align center
-  padding 50px 0px
-
-/* Footer */
-.footer
-  display none
-  position fixed
-  width 100%
-  bottom 10px
-  padding 0px 20px
-  smallcaps()
-  p
-    margin 0px
-    float left
-
-  .directory-grid
-    float right
-    img
-      width 20px
-      height 20px
-      margin 2px
-
-#Home
-  .footer
-    display block
 
 /* DIRECTORY */
 .directory-grid
@@ -260,62 +99,7 @@ img.logo
 #Home .bg
   opacity 1
 
-/* Modals */
-.modal-open
-  padding 0px !important
-  
-.modal-dialog
-  .modal-content
-    text-align center
-    box-shadow none
-    border-radius 0px
-    border: 20px solid rgba(0,0,0,0.2)
-    opacity 0.98
-    h1
-      font-weight 300
-      color $gray
-    h5
-      smallcaps()
-      color $gray-dark
-      font-weight 800
-    p
-      color #999
-    .row
-      margin-bottom 40px
-  .modal-header
-    p
-      smallcaps()
 
-
-/* FORMS */
-outline()
-  background-color transparent
-  border 2px solid $gray-light
-  border-radius 5px
-  padding 1em
-
-input, button,
-.btn
-  smallcaps()
-  padding 1em 2em
-
-
-/* Mailchimp */
-#SubscribeForm
-  input, button
-    outline()
-    dark()
-  input
-    width 150px
-  button
-    background-color $brand-primary
-    border-color $brand-primary
-    &:hover
-      background-color saturate($brand-primary,$lighten-amount)
-      border-color saturate($brand-primary,$lighten-amount)
-
-  .message
-    smallcaps()
 
 @media (max-width: $screen-xs-max)
   #Home .bg
