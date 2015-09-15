@@ -5,11 +5,13 @@ template(name="header")
             img.logo(src="images/monospace.svg") 
             
           ul.nav.navbar-nav.navbar-right
-            li
-              a Blog
+            if currentUser
+              li
+                a Blog
             li
               a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
                 i.fa.fa-bars
 
-          form.navbar-form
-            +loginButtons
+          if currentUser
+            form.navbar-form
+              +loginButtons

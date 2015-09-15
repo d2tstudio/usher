@@ -13,11 +13,6 @@ outlineButton()
   color black
   background none
 
-underlinedButton()
-  background none
-  border-bottom 2px solid black
-  border-radius 0px
-
 plainTextButton()
   background none
   border-radius 0px
@@ -25,6 +20,10 @@ plainTextButton()
   border-bottom 2px solid white
   &:hover
     border-bottom 2px solid $brand-primary
+
+underlinedButton()
+  plainTextButton()
+  border-bottom-color $gray
 
 raisedButton()
   border-bottom: 3px solid green;
@@ -38,17 +37,17 @@ a.menu.btn.btn-link
 /* Login */
 #login-buttons
   .login-button
-    background-color $brand-primary
-    font-size 90%
-    border 0px
-    padding 10px 5px
-    smallcaps()
+      underlinedButton()
+      smallcaps()
+      color $gray
     &:hover
-      background-color saturate($brand-primary, $lighten-amount)
+      background-color none !important
 
-    &#login-buttons-logout
+    /*
+      &#login-buttons-logout
       plainTextButton()
       color $gray
+    */
 
   .login-display-name
     smallcaps()
