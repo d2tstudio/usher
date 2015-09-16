@@ -2,12 +2,19 @@ template(name="header")
     .header.container-fluid
       .navbar(role='navigation')
           a.navbar-brand(href='/')
-            img.logo(src="images/monospace.svg") 
+            if currentUser
+              img.avatar.img-circle(src="{{services.dribbble.avatar}}")
+            else
+              img.logo(src="images/monospace.svg") 
             
           ul.nav.navbar-nav.navbar-right
             if currentUser
               li
-                a Blog
+                a.btn.btn-link About
+              li
+                a.btn.btn-link Portfolio
+              li
+                a.btn.btn-link Connect Blog
             li
               a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
                 i.fa.fa-bars
