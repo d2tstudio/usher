@@ -2,7 +2,7 @@ template(name="portfolio")
   .portfolio.container-fluid
     .row
       each shots
-        section(class="modal modal-dark fade" id="#{id}")
+        section(class="lightbox modal modal-dark fade" id="#{id}")
           .modal-dialog
             .modal-content
               .modal-header
@@ -11,8 +11,9 @@ template(name="portfolio")
                     button.pull-right.close-button(type="button", data-dismiss="modal") Close              
               .modal-body
                 .row
-                  .col-md-12
-                      img.largeImage(src="#{images.hidpi}")
+                  .col-md-12.col-xs-12
+                      a(href="#", data-dismiss="modal") 
+                        img.largeImage(src="#{images.hidpi}")
 
         .col.col-md-4.col-sm-6
           .shot
@@ -32,4 +33,4 @@ template(name="portfolio")
 
                 h1 #{title}
                 | {{{description}}} 
-            img(src="#{images.hidpi}")
+            img(src="#{images.normal}")
