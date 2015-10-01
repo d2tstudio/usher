@@ -5,13 +5,9 @@ template(name="controlPanel")
         .modal-header
           .row
             .col-md-12
-                button.pull-right.close-button(type="button", data-dismiss="modal") Close
-          .row
-            .col-md-12
-              img.logo(src="images/monospace.svg") 
-              h1 Monospace Gallery
-              p v0.4
-
+              button.pull-right.close-button(type="button", data-dismiss="modal") Close
+              img.logo.pull-left(src="images/monospace.svg") 
+        .modal-body
           .row
             .col-md-12
               // Nav tabs
@@ -31,7 +27,6 @@ template(name="controlPanel")
               // Tab panes
               .tab-content
                   #about.tab-pane.fade.in.active(role='tabpanel') 
-                    .modal-body
                       .row
                         .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
                           h5 About
@@ -47,19 +42,16 @@ template(name="controlPanel")
                           #SubscribeForm
                             +MailChimpListSubscribe
                   #profile.tab-pane.fade(role='tabpanel')
-                    .modal-body
                       .row
                         .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
                           h5 Messages
                           
                   #messages.tab-pane.fade(role='tabpanel')
-                    .modal-body
                       .row
                         .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
                           h5 Portfolio Settings                    
                         
                   #settings.tab-pane.fade(role='tabpanel') 
-                    .modal-body
                       .row
                         .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
                           h5 Choose Blogging Account

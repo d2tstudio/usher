@@ -1,7 +1,19 @@
-template(name="portfolio")
+template(name="portfolio")  
   .portfolio.container-fluid
     .row
       each shots
+        section(class="modal modal-dark fade" id="#{id}")
+          .modal-dialog
+            .modal-content
+              .modal-header
+                .row
+                  .col-md-12
+                    button.pull-right.close-button(type="button", data-dismiss="modal") Close              
+              .modal-body
+                .row
+                  .col-md-12
+                      img.largeImage(src="#{images.hidpi}")
+
         .col.col-md-4.col-sm-6
           .shot
             .label
@@ -9,7 +21,7 @@ template(name="portfolio")
                 li #{title}
                 li.likes #{likes_count}
                   span.fa.fa-heart
-            .shoterlay
+            a.shoterlay(href="#", data-toggle="modal", data-target="##{id}")
               article.shot-description
                 .likes
                   ul
@@ -19,5 +31,5 @@ template(name="portfolio")
                       span.result-count #{views_count}
 
                 h1 #{title}
-                | {{{description}}}
-            img(src="#{images.normal}")
+                | {{{description}}} 
+            img(src="#{images.hidpi}")

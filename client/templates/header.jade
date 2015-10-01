@@ -10,14 +10,13 @@ template(name="header")
           ul.nav.navbar-nav.navbar-right
             if currentUser
               li
-                a.btn.btn-link About
+                a.btn.btn-link.disabled Portfolio
               li
-                a.btn.btn-link Portfolio
+                a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
+                  i.fa.fa-bars
+            else
               li
-                a.btn.btn-link Connect Blog
-            li
-              a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
-                i.fa.fa-bars
+                a.btn.btn-link               
 
           if currentUser
             form.navbar-form
