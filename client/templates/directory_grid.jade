@@ -3,4 +3,5 @@ template(name="directoryGrid")
     each user
       .user
         a(href="{{pathFor 'profile' username=services.dribbble.username}}")
-          img.img-circle(src="{{services.dribbble.avatar}}")
+          img.img-circle.avatar(src="{{services.dribbble.avatar}}")
+        p #{services.dribbble.username}

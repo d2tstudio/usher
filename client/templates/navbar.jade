@@ -15,26 +15,15 @@ template(name="navbar")
               span.icon-bar
             |       
             a.navbar-brand(href='/')
-              if currentUser
-                img.avatar.img-circle(src="{{services.dribbble.avatar}}")
-              else
-                img.logo(src="images/logo.svg") 
-            if currentUser
-              p.navbar-text #{profile.name}
-            else
-              p.navbar-text Monospace Gallery
+              img.logo(src="images/logo.svg") 
+            p.navbar-text Monospace Gallery
 
           // Collect the nav links, forms, and other content for toggling
           #navCollapse.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right              
               li
                 a.menu.btn.btn-link(href="{{pathFor 'About'}}") About
+
               li
                 a
                   +loginButtons
-                
-                  
-                  
-
-          // /.navbar-collapse
-        // /.container-fluid
