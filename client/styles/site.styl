@@ -10,23 +10,12 @@ html, body
 body
   padding 0px
 
-/* Header */
-.header
-  padding 10px 0px
+ul
+  li
+    list-style none
 
-.navbar-brand
-  i:before
-    margin-right 5px
-
-.bg
-  height 100%
-  width 100%
-  /*background-image url('../images/mast.jpg')*/
-  background-size cover
-  background-position center top
-  position fixed
-  z-index -500
-  opacity 0.05
+dt
+  margin-top 20px
 
 /* DIRECTORY */
 .directory-grid
@@ -59,15 +48,7 @@ body
     width 100%
     margin 0 auto
 
-  .signup
-    .welcome
-      text-align left
-      h1
-      p.lead
-        letter-spacing 3px
-        margin-left 0px
-
-/* Bootstrap Overwrites */
+/* Bootstrap Overwrites
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -0%);
   -ms-transform: translate(0, -0%);
@@ -77,3 +58,9 @@ body
   -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
+*/
+
+.modal-dialog
+  width 100% !important
+  height 100%
+  background white

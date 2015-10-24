@@ -1,9 +1,10 @@
 template(name="footer")
-
-    footer.footer.container-fluid
-      .row
-        .col-md-12
-          p.smallcaps a Project by
-            a(href="http://dribbble.com/derrybirkett") Derry Birkett
-
-          +directoryGrid
+  .footer
+    nav.navbar.navbar-default.navbar-fixed-bottom
+      .container-fluid
+        ul.nav.navbar-nav.navbar-right
+          li
+            a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
+              i.fa.fa-bars        
+      // /.navbar-collapse
+    // /.container-fluid

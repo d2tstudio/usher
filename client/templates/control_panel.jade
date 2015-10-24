@@ -3,60 +3,88 @@ template(name="controlPanel")
     .modal-dialog
       .modal-content
         .modal-header
-          .row
-            .col-md-12
-              button.pull-right.close-button(type="button", data-dismiss="modal") Close
-              img.logo.pull-left(src="images/monospace.svg") 
+            button.close-button(type="button", data-dismiss="modal") Close
+          
         .modal-body
-          .row
-            .col-md-12
+          .row-fluid
+            .container-fluid
               // Nav tabs
-              ul.nav.nav-tabs(role='tablist')
+              ul.nav.nav-tabs.nav-justified(role='tablist')
+
                 li.active(role='presentation')
                   a(href='#about', aria-controls='about', role='tab', data-toggle='tab') About
                 |                     
+
                 li(role='presentation')
-                  a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Messages
+                  a(href='#profile', aria-controls='profile', role='tab', data-toggle='tab') Go PRO
                 |                     
+
                 li(role='presentation')
-                  a(href='#messages', aria-controls='messages', role='tab', data-toggle='tab') Portfolio Settings
-                |                     
-                li(role='presentation')
-                  a(href='#settings', aria-controls='settings', role='tab', data-toggle='tab') Blog Settings
+                  a(href='#settings', aria-controls='settings', role='tab', data-toggle='tab') Share
+                |                  
 
               // Tab panes
               .tab-content
                   #about.tab-pane.fade.in.active(role='tabpanel') 
-                      .row
-                        .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
-                          h5 About
-                          p 
-                            | Monospace Gallery is being built by 
-                            a(href="http://dribbble.com/derrybirkett") Derry Birkett
-                            | , a designer who wants to be free from uploading images to his website.
+                      .row-fluid
+                        .container-fluid
+                          .col-md-3.col-sm-6.col-xs-10
+                            h5 About
+                            p 
+                              | Monospace Gallery is being built by 
+                              a(href="http://dribbble.com/derrybirkett") Derry Birkett
+                              | , a designer who wants to be free from uploading images to his website.
 
-                      .row
-                        .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
-                          h5 Follow Updates
-                          p This app is in constant development, leave your email to be notified of feature updates.
-                          #SubscribeForm
-                            +MailChimpListSubscribe
+                          .col-md-3.col-md-offset-1.col-sm-6.col-xs-10                            
+                            +goPro
+
+                          .col-md-3.col-md-offset-1.col-sm-6.col-xs-12
+                            +subscribe
+
                   #profile.tab-pane.fade(role='tabpanel')
-                      .row
-                        .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
-                          h5 Messages
+                      .row-fluid
+                        .container-fluid
+                          +goPro
                           
-                  #messages.tab-pane.fade(role='tabpanel')
-                      .row
-                        .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
-                          h5 Portfolio Settings                    
-                        
                   #settings.tab-pane.fade(role='tabpanel') 
-                      .row
-                        .col-md-4.col-md-offset-4.col-sm-6.col-sm-offset-3.col-xs-8.col-xs-offset-2
-                          h5 Choose Blogging Account
-                          ul.nav.nav-pills
-                            li
-                              a Ghost
-                            li
-                              a Wordpress
+                    .row-fluid
+                      .container-fluid
+                        +share
+
+
+template(name="goPro")
+  h5 Go PRO
+  dl
+    dt Own domain name
+    dd Host on your own domain name.
+
+    dt Own logo, whitelabelled
+    dd Noone will know you're being powered by me.
+    
+  ul.pager
+    li.previous 
+      a
+        | 24$ per year
+
+template(name="share")
+  h5 Share your Portfolio
+  ul.pager
+    li 
+      a Twitter
+    li 
+      a Facebook
+    li 
+      a Google+
+
+template(name="subscribe")
+  h5 Follow Updates
+  p This app is in constant development, leave your email to be notified of feature updates.
+  
+  #SubscribeForm
+    +MailChimpListSubscribe
+
+template(name="changelog")
+  ul
+    li 
+      strong 0.4 
+      | Cleaner, lighter UI and various UI improvements.

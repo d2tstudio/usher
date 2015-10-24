@@ -7,6 +7,8 @@ Navbar
 .navbar
   background transparent
   border none
+  -webkit-box-shadow none
+  box-shadow none
 
   .navbar-nav
     li >
@@ -14,9 +16,6 @@ Navbar
       a:active,
       a:focus
         background none
-
-.menu
-  margin-right 10px
 
 img.logo
   height 40px
@@ -27,7 +26,11 @@ img.logo
   box-shadow none
 
 .navbar-brand
-  padding 5px 15px
+  padding 15px
   .avatar
     height 30px
     width 30px
+
+@media (min-width: 768px)
+  .navbar-brand
+    padding-right 0px

@@ -39,13 +39,13 @@ a.menu.btn.btn-link
 
 /* Login */
 #login-buttons
-  .login-button
-    plainTextButton()
-    smallcaps()
-    color $gray-light
-    &:hover
-      background-color transparent !important
+  .login-buttons-with-only-one-button .login-button
+    background-color transparent
+    border 1px solid #666
+    color #333
 
+  .login-display-name
+    display none
   /*
     &#login-buttons-logout
     plainTextButton()
