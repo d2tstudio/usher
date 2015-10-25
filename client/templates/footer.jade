@@ -13,3 +13,19 @@ template(name="footer")
               i.fa.fa-bars     
       // /.navbar-collapse
     // /.container-fluid
+
+template(name="footerSimple")
+  .footer
+    nav.navbar.navbar-default
+      .container-fluid
+        ul.nav.navbar-nav
+          li
+            a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
+              | Made by Derry
+        
+        ul.nav.navbar-nav.navbar-right
+          li
+            a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
+              i.fa.fa-bars     
+      // /.navbar-collapse
+    // /.container-fluid
