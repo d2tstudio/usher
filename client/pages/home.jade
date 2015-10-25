@@ -2,9 +2,12 @@ template(name='home')
   .home
     .bg    
     .row
-      .container     
-        +signup
-    .row-fluid
-      .container-fluid
-        .col-md-12
-          +directoryGrid
+      .container
+        .col-lg-10.col-lg-offset-1.col-m-12.col-sm-12.col-xs-12
+          +signup
+
+    .directory-grid
+      each user
+        a(href="{{pathFor 'Profile' username=services.dribbble.username}}")
+          img.img-circle.avatar(src="{{services.dribbble.avatar}}")
+      

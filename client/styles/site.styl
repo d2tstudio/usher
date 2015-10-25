@@ -10,8 +10,14 @@ html, body
 body
   padding 0px
 
+a
+  color black
+
 h1
   font-weight 300
+
+h5
+  margin-top 1em
 
 ul
   li
@@ -19,6 +25,11 @@ ul
 
 dt
   margin-top 20px
+
+p
+  a
+    border-bottom 1px dotted grey
+
 
 .overlay
   position absolute
@@ -61,11 +72,32 @@ dt
 
 .jumbotron
   text-align center
+  h1
+    font-size 3em
+  p
+    font-size 18px
+    line-height 22px
 
+/* HOME */
 .home
+  .signup
+    padding 50px 0px
+  #login-buttons
+    margin 30px
   .directory-grid
+    position fixed
+    bottom 10px
+    left 10px
     .avatar
-      height 30px
-      width 30px
+      height 20px
+      width 20px
     p
       display none
+
+/* ABOUT */
+.about
+  h1
+    line-height 1.5em
+  em
+    border-bottom 5px solid #DDDBC4
+    font-style normal

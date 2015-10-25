@@ -2,13 +2,45 @@ template(name="about")
   .about
     .row-fluid
       .container-fluid
-          .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.col-xs-8.col-xs-offset-1
-            h1 About Monospace
-            p.lead Responsive portolios, always in sync with your Dribbble shots. Designed by a Dribbble designer *for* Dribbble designers.
-            p Who wants to upload their work to 10 different places: Monospace allows designers to showcase their work in a professional, responsive layout without any uploading hassle. Update your Dribbble shots, and your Monospace portolio is automatically updated too.
+        .col-md-8.col-md-offset-2.col-sm-8.col-sm-offset-2.col-xs-12
+          .jumbotron
+            h1 Designed 
+              em by
+              | a Dribbble designer 
+              br
+              em for
+              | Dribbble designers.
+
+    .row-fluid
+      .container-fluid
+          .col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2.col-xs-10.col-xs-offset-1
+            p Monospace allows you to showcase your work in a professional, responsive layout without any uploading hassle and always in sync with your Dribbble shots.
             blockquote When you upload new Dribbble shots your Monospace portfolio is automatically updated too.
-            p Monospace is being built by 
-              a(href="http://derrybirkett.com") Derry Birkett
-              | , a Dribbble designer. This is a new release, but I have various features in mind to make it easy for designers to showcase their work in a professional, responsive web portfolio.
+            p Monospace is being built by just one  
+              a(href="http://derrybirkett.com") designer on Dribbble.
+              | This is a new release, but there are many features planned to make it easy for designers to showcase their work in a professional, responsive web portfolio - without the hassle, and always updated.
 
             +subscribe
+
+template(name="about2col")
+  .about
+    .row-fluid
+      .container-fluid
+        .col-md-12.col-sm-12.col-xs-12
+          .jumbotron
+            h1 A responsive portolio website, always in sync with your Dribbble shots. 
+            p.lead Designed *by* a Dribbble designer *for* Dribbble designers.
+    .row-fluid
+      .container-fluid
+          .col-md-4.col-md-offset-1
+            p Who wants to upload their work to 10 different places: Monospace allows designers to showcase their work in a professional, responsive layout without any uploading hassle. Update your Dribbble shots, and your Monospace portolio is automatically updated too.
+          .col-md-4.col-md-offset-1              
+            p Monospace is being built by 
+              a(href="http://derrybirkett.com") a dribbble designer.
+              | This is a new release, but there are many features planned to make it easy for designers to showcase their work in a professional, responsive web portfolio - without the hassle, and always updated.
+
+    .row-fluid
+      .container-fluid
+        .col-md-10.col-md-offset-1.col-sm-12.col-xs-12
+          blockquote When you upload new Dribbble shots your Monospace portfolio is automatically updated too.
+          +subscribe
