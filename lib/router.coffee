@@ -7,6 +7,9 @@ Router.configure
 Router.route '/about',
   name: 'About'
 
+Router.route '/pro',
+  name: 'Pro'
+
 Router.route '/directory',
   name: 'Directory'
   data: ->
