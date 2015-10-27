@@ -4,8 +4,8 @@ template(name="footer")
       .container-fluid
         ul.nav.navbar-nav
           li
-            a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
-              | Made by Derry
+            a.menu.btn.btn-link(href="{{pathFor 'Pro'}}")
+              | Portfolio Powered by Monospace Gallery
         
         ul.nav.navbar-nav.navbar-right
           li
@@ -15,17 +15,8 @@ template(name="footer")
     // /.container-fluid
 
 template(name="footerSimple")
-  .footer
-    nav.navbar.navbar-default
-      .container-fluid
-        ul.nav.navbar-nav
-          li
-            a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
-              | Made by Derry
-        
-        ul.nav.navbar-nav.navbar-right
-          li
-            a.menu.btn.btn-link(href="#", data-toggle="modal", data-target="#ControlPanel")
-              i.fa.fa-bars     
-      // /.navbar-collapse
-    // /.container-fluid
+  .row-fluid
+    .container-fluid
+      .footerSimple
+        p Monospace is being built by 
+          a(href="http://derrybirkett.com") Derry Birkett

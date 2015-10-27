@@ -2,7 +2,7 @@ template(name="directoryGrid")
   .directory-grid
     each user
       .user
-        a(href="{{pathFor 'profile' username=services.dribbble.username}}")
+        a(href="{{pathFor 'Profile' username=services.dribbble.username}}")
           img.img-circle.avatar(src="{{services.dribbble.avatar}}")
         p 
           strong #{services.dribbble.username} 

@@ -22,6 +22,8 @@ template(name="navbar")
           #navCollapse.collapse.navbar-collapse
             ul.nav.navbar-nav.navbar-right              
               li
+                a.menu.btn.btn-link(href="{{pathFor 'Directory'}}") Directory            
+              li
                 a.menu.btn.btn-link(href="{{pathFor 'About'}}") About
               li
                 a.menu.btn.btn-link(href="{{pathFor 'Pro'}}") Support a PRO
