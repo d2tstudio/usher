@@ -1,10 +1,12 @@
 template(name="directoryGrid")
   .directory-grid
-    each user
-      .user
-        a(href="{{pathFor 'Profile' username=services.dribbble.username}}")
-          img.img-circle.avatar(src="{{services.dribbble.avatar}}")
-        p 
-          strong #{services.dribbble.username} 
-          | #{services.dribbble.location}
-        p.bio {{{services.dribbble.bio}}}
+    .row
+      each user
+        .col-xs-4
+          .user
+            a(href="{{pathFor 'Profile' username=services.dribbble.username}}")
+              img.img-circle.avatar(src="{{services.dribbble.avatar}}")
+            p 
+              strong #{services.dribbble.username} 
+              | #{services.dribbble.location}
+            p.bio {{{services.dribbble.bio}}}
